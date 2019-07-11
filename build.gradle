@@ -14,6 +14,7 @@ buildscript {
         junitVersion = "4.12"
         okhttpVersion = "3.12.0"
         jsonPathVersion = "2.4.0"
+
     }
 
     repositories {
@@ -27,6 +28,7 @@ buildscript {
     }
 }
 
+
 apply plugin: DependenciesGraphPlugin
 
 subprojects {
@@ -39,6 +41,8 @@ subprojects {
         mavenCentral()
         jcenter()
     }
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
 
     dependencies {
         compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
@@ -56,4 +60,5 @@ subprojects {
             exceptionFormat = 'full'
         }
     }
+
 }
